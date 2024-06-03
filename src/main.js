@@ -48,6 +48,7 @@ import i18n from '@/i18n'
 
 // 全局注册element-plus/icons-vue
 import * as ICONS from '@element-plus/icons-vue'
+
 Object.entries(ICONS).forEach(([key, component]) => {
   // app.component(key === 'PieChart' ? 'PieChartIcon' : key, component)
   app.component(key, component)
@@ -71,9 +72,9 @@ Object.entries(Components).forEach(([key, component]) => {
   app.component(key, component)
 })
 
-// 注册自定义指令
-import * as Directives from '@/directive'
-Object.values(Directives).forEach(fn => fn(app))
+// // 注册自定义指令
+// import * as Directives from '@/directive'
+// Object.values(Directives).forEach(fn => fn(app))
 
 // 错误日志
 import useErrorHandler from './error-log'

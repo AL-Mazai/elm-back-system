@@ -1,22 +1,11 @@
-<!--
- * @Descripttion: 
- * @version: 
- * @Date: 2021-04-20 11:06:21
- * @LastEditors: huzhushan@126.com
- * @LastEditTime: 2022-09-27 18:24:27
- * @Author: huzhushan@126.com
- * @HomePage: https://huzhushan.gitee.io/vue3-element-admin
- * @Github: https://github.com/huzhushan/vue3-element-admin
- * @Donate: https://huzhushan.gitee.io/vue3-element-admin/donate/
--->
 <template>
   <div class="login">
     <el-form class="form" :model="model" :rules="rules" ref="loginForm">
       <h1 class="title">Vue3 Element Admin</h1>
-      <el-form-item prop="userName">
+      <el-form-item prop="username">
         <el-input
           class="text"
-          v-model="model.userName"
+          v-model="model.username"
           prefix-icon="User"
           clearable
           :placeholder="$t('login.username')"
@@ -78,7 +67,7 @@ export default defineComponent({
       state.rules = getRules()
     })
     const getRules = () => ({
-      userName: [
+      username: [
         {
           required: true,
           message: ctx.$t('login.rules-username'),
@@ -101,7 +90,7 @@ export default defineComponent({
     })
     const state = reactive({
       model: {
-        userName: 'admin',
+        username: 'admin',
         password: '123456',
       },
       rules: getRules(),
